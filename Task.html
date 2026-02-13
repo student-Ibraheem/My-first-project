@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Riyana Calender</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+    
+     .slider img{
+       height: 400px;
+       margin-top: 70px;
+ }
+ .img img{
+  height: 80px;
+  width: 80px;
+}
+.links{
+  margin-left: 400px;
+  display: flex;
+}
+.footer {
+  background-color: #1f2b38;
+}
+
+.footer-title {
+  border-bottom: 2px solid #ffffff;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.footer-link {
+  color: #cfd8dc;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.footer-link:hover {
+  color: #1cc0e8;
+}
+
+.footer-text {
+  color: #9fcbcb;
+  margin-bottom: 8px;
+}
+    .rox{
+      background-color: rgba(3, 38, 61, 0.991);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .box{
+      background-color: white;
+      border-radius: 10px;
+      padding: 30px;
+      width: 100%;
+      max-width: 450px;  
+      text-align: center;
+    }
+
+    h1{
+      color: black;
+      margin-bottom: 20px;
+    }
+
+    .text input{
+      width: 100%;
+      height: 50px;
+      font-size: 15px;
+      padding-left: 10px;
+      margin-bottom: 15px;
+    }
+
+    .btn1{
+      width: 100%;
+      height: 47px;
+      font-size: 16px;
+      border: none;
+      background-color: rgba(3, 38, 61, 0.991);
+      color: white;
+      border-radius: 5px;
+    }
+    .btn1:hover{
+      background-color: #021f32;
+    }
+    .forget{
+      margin-top: 15px;
+      font-size: 14px;
+    }
+    .forget a{
+      color: grey;
+      text-decoration: none;
+    }
+    .forget a:hover{
+      text-decoration: underline;
+    }
+    @media (max-width: 576px){
+      .box{
+        padding: 20px;
+      }
+      h1{
+        font-size: 22px;
+      }
+    }
+    @media (max-width: 768px){
+      .box{
+        max-width: 90%;
+      }
+    }
+    .faq-title {
+      text-align: center;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      margin: 40px 0 30px;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    .accordion-button {
+      font-weight: 500;
+    }
+
+#pricing {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#pricing h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    width: 300px;
+    padding: 30px 25px;
+    border-radius: 6px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 42px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 25px;
+}
+
+.card ul {
+    list-style: none;
+}
+
+.card ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+.card ul li:last-child {
+    border-bottom: none;
+}
+#features-section {
+    padding: 70px 10%;
+    background: #f9fafb;
+    text-align: center;
+}
+
+#features-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #1f2d3d;
+}
+
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature-item {
+    background: #fff;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-6px);
+}
+
+.feature-item h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #2563eb;
+}
+
+.feature-item p {
+    font-size: 15px;
+    color: #4b5563;
+    line-height: 1.7;
+}
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:12px 40px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    z-index:1000;
+}
+
+/* Logo area */
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+.logo img{
+    width:45px;
+}
+.logo h2{
+    font-size:26px;
+    font-weight:700;
+    color:#000;
+}
+
+/* Menu */
+.menu{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+.menu a{
+    text-decoration:none;
+    color:#000;
+    font-size:14px;
+    letter-spacing:1px;
+}
+.menu a:hover{
+    color:#007bff;
+}
+
+/* Button */
+.btn{
+    border:1px solid #0066ff;
+    padding:8px 18px;
+    border-radius:6px;
+    color:#0066ff;
+    font-size:14px;
+    text-decoration:none;
+    transition:0.3s;
+}
+.btn:hover{
+    background:#0066ff;
+    color:#fff;
+}
+.applications {
+  background-color: #1f2f3f;
+  color: #ffffff;
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.applications h2 {
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.divider {
+  width: 50px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 0 auto 50px;
+}
+
+.lists {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  text-align: left;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 18px;
+  font-size: 16px;
+}
+
+ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+ul li a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .lists {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .applications h2 {
+    font-size: 28px;
+  }
+}
+
+
+    </style>
+</head>
+
+<body>
+  <section id="Home">
+ <div class="navbar">
+    <div class="logo">
+        <img src="./images/098.jpg" alt="Logo">
+        <h2>Riyana Calender</h2>
+    </div>
+
+    <div class="menu">
+        <a href="#Home">Home</a>
+        <a href="#features-section">FEATURES</a>
+        <a href="#pricing">PRICING</a>
+        <a href="#faqs">FAQS</a>
+        <a href="#Create" class="btn">Create Clender</a>
+    </div>
+</div>
+
+ 
+
+
+<div class="slider">
+  <div id="carouselExampleCaptions" class="carousel slide carousel-fade ">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./images/img 2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block text-primary">
+          <h2>Welcome to Riyana Calender</h2>
+          <p>Calendars, Diaries & Books.</p>
+        </div>
+        
+      </div>
+      <div class="carousel-item ">
+        <img src="./images/images 7.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block text-primary">
+         <h2>The best Calender blog</h2>
+          <p>copies, Registers & istesionaries.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./images/images 8.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block text-primary">
+    <h2>Award winning blog</h2>
+          <p>Calendars, Diaries & Books.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  </div>
+  </section>
+ <section id="features-section">
+    <h2>Features</h2>
+    <div class="features-container">
+
+        <div class="feature-item">
+            <h3>Easy Access via Links</h3>
+            <p>No login needed — access the calendar securely through unique links with customizable permissions.</p>
+        </div>
+
+        <div class="feature-item">
+            <h3>Colored Sub-Calendars</h3>
+            <p>Organize your calendar with color-coded sub-calendars and control read/write access per link.</p>
+        </div>
+
+        <div class="feature-item">
+            <h3>Reminders & Notifications</h3>
+            <p>Get email or SMS reminders for events and daily or weekly agenda summaries.</p>
+        </div>
+
+        <div class="feature-item">
+            <h3>Booking Functionality</h3>
+            <p>Let users book appointments directly in your calendar with automatic free-time detection.</p>
+        </div>
+
+        <div class="feature-item">
+            <h3>Multi-Device Support</h3>
+            <p>Use Calendar.online on desktop, mobile, tablet, and via native Android/iOS apps.</p>
+        </div>
+
+        <div class="feature-item">
+            <h3>Website Integration</h3>
+            <p>Embed or link your calendar to your website using simple HTML or iframe code.</p>
+        </div>
+
+        <div class="feature-item">
+            <h3>Export & Import</h3>
+            <p>Export to PDF/Excel and import from other calendar formats (Outlook, Google, etc.).</p>
+        </div>
+
+        <div class="feature-item">
+            <h3>API & Advanced Tools</h3>
+            <p>Premium users get API access, invite participants, custom branding, and more.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="pricing">
+    <h1>Pricing</h1>
+
+    <div class="pricing-container">
+
+      
+        <div class="card">
+            <h2>Basic</h2>
+            <div class="price">$0.00</div>
+            <p class="subtitle">free</p>
+
+            <ul>
+                <li>Up to 6 sub-calendars</li>
+                <li>Up to 3 access links</li>
+                <li>Unlimited users</li>
+                <li>PDF export</li>
+                <li>Event import & export</li>
+                <li>Free forever</li>
+            </ul>
+        </div>
+
+      
+        <div class="card featured">
+            <h2>Plus</h2>
+            <div class="price">$6.90</div>
+            <p class="subtitle">per calendar / month</p>
+
+            <ul>
+                <li>All Basic features</li>
+                <li>Up to 20 sub-calendars</li>
+                <li>Email reminders</li>
+                <li>Notifications</li>
+                <li>5 booking products</li>
+                <li>Cancel anytime</li>
+            </ul>
+        </div>
+
+      
+        <div class="card">
+            <h2>Premium</h2>
+            <div class="price">$19.90</div>
+            <p class="subtitle">per calendar / month</p>
+
+            <ul>
+                <li>All Plus features</li>
+                <li>Unlimited sub-calendars</li>
+                <li>Unlimited access links</li>
+                <li>SMS reminders</li>
+                <li>API interface</li>
+                <li>No branding</li>
+            </ul>
+        </div>
+      </div>
+      <br>
+      <br>
+      <section class="applications">
+  <h2>Wide range of applications</h2>
+  <div class="divider"></div>
+
+  <div class="lists">
+    <ul>
+      <li>Team calendar</li>
+      <li>Family calendar</li>
+      <li>Company calendar</li>
+      <li>Practice calendar</li>
+      <li>Club calendar</li>
+      <li>Integration into website</li>
+      <li><a href="#">Display on info monitor</a></li>
+    </ul>
+
+    <ul>
+      <li>Personal calendar</li>
+      <li>Holiday planning</li>
+      <li>Timetable</li>
+      <li>Riding stable planning</li>
+      <li>Room planning</li>
+      <li>Duty roster</li>
+      <li>School calendar</li>
+    </ul>
+  </div>
+</section>
+</section>
+  <section id="Create">
+  <div class="rox">
+    <div class="box">
+    <h1>Create Calendar</h1>
+ <form>
+    <div class="text">
+      <input type="text" placeholder="Calendar name (optional)">
+      <input type="email" placeholder="E-mail address" required>
+    </div>
+
+    <button class="btn1">Create Free</button></form>
+
+    <div class="forget">
+      <a href="./files/j.html">Forgot your access link?</a>
+    </div>
+  </div>
+  </div>
+</section>
+<section id="faqs">
+<div class="container">
+  <div class="faq-title">
+    FAQ - FREQUENTLY ASKED QUESTIONS
+  </div>
+
+  <div class="accordion" id="faqAccordion">
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">
+          Who is this calendar meant for?
+        </button>
+      </h2>
+      <div id="faq1" class="accordion-collapse collapse show">
+        <div class="accordion-body">
+          Calendar.online is for individuals and groups such as families and teams.
+          Access via links makes it easy to use on multiple devices or share with others.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">
+          How can I access my calendar?
+        </button>
+      </h2>
+      <div id="faq2" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          After creating your calendar, you will receive an administrator link.
+          This link gives access to your calendar and settings.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq3">
+          What are access links?
+        </button>
+      </h2>
+      <div id="faq3" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          Access links allow users to view or edit the calendar.
+          Each link contains a unique 20-digit string and can be password-protected.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq4">
+          What are sub-calendars?
+        </button>
+      </h2>
+      <div id="faq4" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          Sub-calendars help organize events by topics and colors,
+          making the calendar more structured.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq5">
+          How can I display only certain events?
+        </button>
+      </h2>
+      <div id="faq5" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          You can create or edit access links and set detailed permissions
+          for individual sub-calendars.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq6">
+          How can I install Calendar.online as an app?
+        </button>
+      </h2>
+      <div id="faq6" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <a href="https://play.google.com/store" target="_blank">Google Play Store</a><br>
+          <a href="https://www.apple.com/app-store/" target="_blank">Apple App Store</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq7">
+          Is Calendar.online GDPR compliant?
+        </button>
+      </h2>
+      <div id="faq7" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          Yes. All servers are located in Germany.
+          IP addresses are stored anonymously and no data is sold.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq8">
+          How can I share the calendar?
+        </button>
+      </h2>
+      <div id="faq8" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          Share editor links for editing access and reader links for view-only access.
+          All links can be managed in settings.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+   <section id="#index 1">
+     <footer class="footer bg-dark text-light pt-5 pb-4">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-4 mb-4">
+        <h5 class="footer-title">Information</h5>
+        <ul class="list-unstyled">
+          <li><a href="./files/about.html" class="footer-link">About us</a>
+          <li class="footer-link">GDPR-compliant</li>
+          <li class="footer-link">Server location: Germany</li>
+        </ul>
+        <p class="footer-link">© 2026 Calendar.online</p>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <h5 class="footer-title">Discover</h5>
+        <ul class="list-unstyled">
+          <li><a href="" class="footer-link">English</a></li>
+          <li><a href="" class="footer-link">Integration into your own website</a></li>
+          <li><a href="https://wordpress.org/plugins/kalender-digital/" class="footer-link">WordPress plugin</a></li>
+          <li><a href="./files/price.html" class="footer-link">Pricing</a></li>
+          <li><a href="" class="footer-link">Years / Calendar weeks</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <h5 class="footer-title">Contact</h5>
+        <ul class="list-unstyled">
+          <li class="footer-text"> info@calendar.online</li>
+          <li class="footer-text"> Düsseldorf, Germany</li>
+          <li><a href="./files/privacy.html" class="footer-link">Privacy policy</a></li>
+          <li><a href="" class="footer-link">Imprint</a></li>
+        </ul>
+      </div>
+  
+
+    </div>
+  </div>
+</footer>
+   </section>
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
